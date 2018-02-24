@@ -21,7 +21,7 @@ correct_prediction = tf.equal(tf.arg_max(p, 1), tf.argmax(t, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 sess = tf.InteractiveSession()
-sess.run(tf.initialize_all_variables())
+sess.run(tf.global_variables_initializer())
 
 i = 0
 for _ in range(2000):
