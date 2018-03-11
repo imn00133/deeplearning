@@ -1,9 +1,9 @@
 import numpy as np
-from .functions import softmax, cross_entropy_error
-from .gradient import numerical_gradient
+from functions import softmax, cross_entropy_error
+from gradient import numerical_gradient
 
 
-class simpleNet:
+class SimpleNet:
     def __init__(self):
         self.W = np.random.randn(2, 3)
 
@@ -22,13 +22,13 @@ def f(W):
     return net.loss(x, t)
 
 
-net = simpleNet()
+net = SimpleNet()
 print(net.W)
 
 x = np.array([0.6, 0.9])
 p = net.predict(x)
-print(p)
 
+# 최대값의 인덱스
 print(np.argmax(p))
 
 t = np.array([0, 0, 1])
