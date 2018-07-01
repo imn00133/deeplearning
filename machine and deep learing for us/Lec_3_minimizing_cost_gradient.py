@@ -18,6 +18,11 @@ learning_rate = 0.1
 gradient = tf.reduce_mean((W * X - Y) * X)
 descent = W - learning_rate * gradient
 update = W.assign(descent)
+# Minimize: Gradient Descent
+"""
+optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.1)
+train = optimizer.minimize(cost)
+"""
 
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
