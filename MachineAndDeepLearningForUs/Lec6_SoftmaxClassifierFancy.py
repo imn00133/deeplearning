@@ -47,4 +47,4 @@ with tf.Session() as sess:
     pred = sess.run(prediction, feed_dict={X: x_data})
     # y_data: (N,1) = flatten => (N, ) matches pred.shape
     for p, y in zip(pred, y_data.flatten()):
-        print("[{}] Prediction: {} True Y: {}".frmat(p == int(y), p, int(y)))
+        print("[{}] Prediction: {} True Y: {}".format(p == int(y), p, int(y)))
